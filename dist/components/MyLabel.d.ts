@@ -1,5 +1,5 @@
+/// <reference types="react" />
 import './mylabel.css';
-
 export interface MyLabelProps {
     /**
     * Este es el mensaje del Label
@@ -26,18 +26,4 @@ export interface MyLabelProps {
     */
     backgroundColor?: string;
 }
-
-export const MyLabel = ({
-    allCaps = false,
-    color = 'primary',
-    fontColor,
-    label = 'No Label',
-    size = 'normal',
-    backgroundColor = 'transparent'
-}: MyLabelProps) => {
-    return (
-        <span className={ `label ${size} text-${color}`}  style={{ color: fontColor, backgroundColor}}  >
-            { allCaps ? label.toUpperCase() : label }
-        </span>
-    )
-}
+export declare const MyLabel: ({ allCaps, color, fontColor, label, size, backgroundColor }: MyLabelProps) => JSX.Element;
